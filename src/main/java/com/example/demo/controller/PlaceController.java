@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/places")
 public class PlaceController {
-    @Autowired
-    private PlaceRepository placeRepository;
+    private final PlaceRepository placeRepository;
 
+    @Autowired
     public PlaceController(PlaceRepository placeRepository) {
         this.placeRepository = placeRepository;
     }

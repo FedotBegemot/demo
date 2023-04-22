@@ -4,6 +4,7 @@ import com.mongodb.ConnectionString;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.MongoDatabaseFactory;
+import org.springframework.data.mongodb.MongoTransactionManager;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoClientDatabaseFactory;
 
@@ -12,7 +13,7 @@ public class MongoConfig {
 
     @Bean
     public MongoDatabaseFactory mongo() {
-        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/Web1");
+        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/Web1/admin");
 
         return new SimpleMongoClientDatabaseFactory(connectionString);
     }

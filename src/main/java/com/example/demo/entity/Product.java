@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
     @Document
@@ -9,6 +10,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
         private String id;
         private String name;
         private String type;
+
+        public Product() {
+
+        }
 
         public String getId() {
             return id;
